@@ -27,6 +27,7 @@ def getRandomWord():
 	return word
 
 randomWord = getRandomWord()
+randomWord = "chilly"
 
 originalWords = [i for i in randomWord]
 userInputWords = ["_" for i in randomWord]
@@ -43,8 +44,8 @@ while "_" in userInputWords:
 		index = originalWords.index(userInput)
 		userInputWords[index] = userInput
 		originalWords[index] = "_"
-
-	usedWords.add(userInput)
+	else:
+		usedWords.add(userInput)
 	userAttempts += 1
 
 print("".join(userInputWords))
