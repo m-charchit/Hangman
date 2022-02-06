@@ -27,7 +27,6 @@ def getRandomWord():
 	return word
 
 randomWord = getRandomWord()
-randomWord = "chilly"
 
 originalWords = [i for i in randomWord]
 userInputWords = ["_" for i in randomWord]
