@@ -24,6 +24,7 @@ def getRandomWord():
 	word = choice(words)
 	while " " in word or "-" in word:
 		word = choice(words)
+	return word
 
 randomWord = getRandomWord()
 
