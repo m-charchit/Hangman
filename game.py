@@ -30,19 +30,24 @@ randomWord = getRandomWord()
 
 originalWords = [i for i in randomWord]
 userInputWords = ["_" for i in randomWord]
+usedWords = set()
 
 userAttempts = 0
 
 while "_" in userInputWords:
 	print(" ".join(userInputWords))
-	userInput = input("Enter the alphabet :- ")
+	print("Unmatched alphabets used - " + " ".join(usedWords))
 
+	userInput = input("Enter the alphabet :- ")
 	if userInput in originalWords:
 		index = originalWords.index(userInput)
 		userInputWords[index] = userInput
 		originalWords[index] = "_"
 
+	usedWords.add(userInput)
 	userAttempts += 1
+
+print("".join(userInputWords))
 
 scoreManager = Score()
 scoreManager.readScore()
